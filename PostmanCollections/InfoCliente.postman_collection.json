@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "b4779dfb-f6e3-4f5f-8dba-554399184e61",
+		"name": "InfoCliente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "creacliente 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Julian\",\r\n    \"apellido\":\"Lopez\",\r\n    \"edad\": 38,\r\n    \"fechaNacimiento\":\"1983-09-25\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE-PATH}}/creacliente",
+					"host": [
+						"{{BASE-PATH}}"
+					],
+					"path": [
+						"creacliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creacliente 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Lionel\",\r\n    \"apellido\":\"Messi\",\r\n    \"edad\": 34,\r\n    \"fechaNacimiento\":\"1987-06-24\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE-PATH}}/creacliente",
+					"host": [
+						"{{BASE-PATH}}"
+					],
+					"path": [
+						"creacliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creacliente 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Diego\",\r\n    \"apellido\":\"Maradona\",\r\n    \"edad\": 61,\r\n    \"fechaNacimiento\":\"1960-10-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE-PATH}}/creacliente",
+					"host": [
+						"{{BASE-PATH}}"
+					],
+					"path": [
+						"creacliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creacliente 4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Lionel\",\r\n    \"apellido\":\"Messi\",\r\n    \"edad\": 34,\r\n    \"fechaNacimiento\":\"1987-06-24\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE-PATH}}/creacliente",
+					"host": [
+						"{{BASE-PATH}}"
+					],
+					"path": [
+						"creacliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listclientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE-PATH}}/listclientes",
+					"host": [
+						"{{BASE-PATH}}"
+					],
+					"path": [
+						"listclientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "kpideclientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE-PATH}}/kpideclientes",
+					"host": [
+						"{{BASE-PATH}}"
+					],
+					"path": [
+						"kpideclientes"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE-PATH",
+			"value": "localhost:8080/api/cliente"
+		}
+	]
+}

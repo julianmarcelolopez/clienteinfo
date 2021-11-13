@@ -42,7 +42,7 @@ public class ClienteServiceImpl implements ClienteService {
 		log.info("Get KPI...");
 		List<Cliente> clienteList = this.findAll();
 		List<Integer> ageList = clienteList.stream().map(Cliente::getEdad)
-				.collect(java.util.stream.Collectors.toList());
+				.collect(Collectors.toList());
 
 		return KPIResponse.builder().promedioEdad(Stats.of(ageList).mean())
 				.desviacionEstandarEdad(Stats.of(ageList).populationStandardDeviation()).build();

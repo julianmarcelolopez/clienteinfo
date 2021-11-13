@@ -1,5 +1,7 @@
 package com.jlopez.clienteinfo;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -60,6 +62,8 @@ class ClienteInfoControllerTest {
 		when(service.getAll()).thenReturn(responseList);
 		mockMvc.perform(get("/api/cliente/listclientes/").contentType(MediaType.APPLICATION_JSON_VALUE)
 				.accept(MediaType.APPLICATION_JSON_VALUE)).andExpect(status().isOk());
+
+		assertNotEquals(responseList, null);
 	}
 
 }

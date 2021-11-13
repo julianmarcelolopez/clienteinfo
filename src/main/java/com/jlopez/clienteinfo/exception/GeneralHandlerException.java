@@ -12,7 +12,6 @@ import com.jlopez.clienteinfo.exception.custom.BadRequestCustomException;
 import com.jlopez.clienteinfo.exception.custom.ConflictCustomException;
 import com.jlopez.clienteinfo.exception.custom.ForbiddenCustomException;
 import com.jlopez.clienteinfo.exception.custom.NotFoundCustomException;
-import com.jlopez.clienteinfo.exception.custom.UnauthorizedCustomException;
 
 @ControllerAdvice
 public class GeneralHandlerException {
@@ -33,7 +32,6 @@ public class GeneralHandlerException {
 
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	@ExceptionHandler({ BadRequestCustomException.class,
-//			MismatchCustomException.class,
 			org.springframework.web.method.annotation.MethodArgumentTypeMismatchException.class,
 			org.springframework.web.HttpRequestMethodNotSupportedException.class,
 			org.springframework.web.bind.MethodArgumentNotValidException.class,
@@ -53,21 +51,11 @@ public class GeneralHandlerException {
 	}
 
 	@ResponseStatus(HttpStatus.CONFLICT)
-	@ExceptionHandler({ ConflictCustomException.class,
-//		DataIntegrityCustomException.class
-			org.springframework.dao.DuplicateKeyException.class,
+	@ExceptionHandler({ ConflictCustomException.class, org.springframework.dao.DuplicateKeyException.class,
 			org.springframework.dao.DataIntegrityViolationException.class })
 	@ResponseBody
 	public ErrorMessage conflictHandler(HttpServletRequest request, Exception exception) {
 		return new ErrorMessage(exception, request.getRequestURI());
-	}
-
-	@ResponseStatus(HttpStatus.UNAUTHORIZED)
-	@ExceptionHandler({ UnauthorizedCustomException.class
-//		, org.springframework.security.access.AccessDeniedException.class
-			})
-	public void unauthorizedHandler() {
-
 	}
 
 }

@@ -26,7 +26,7 @@ public class SwaggerConfig {
 	}
 
 	private ApiInfo getApiInfo() {
-		return new ApiInfo("ClientInfo Service API", "ClientInfo Service API Description", "1.0", "https://github.com/julianmarcelolopez",
+		return new ApiInfo("ClienteInfo Service API", "ClienteInfo Service API Description", "1.0", "https://github.com/julianmarcelolopez",
 				new Contact("Julian Lopez", "https://www.linkedin.com/in/julian-marcelo-lopez/", "julianmarcelolopez@gmail.com"), "LICENSE", "LICENSE URL",
 				Collections.emptyList());
 	}

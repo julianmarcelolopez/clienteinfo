@@ -17,7 +17,7 @@ import com.jlopez.clienteinfo.dto.KPIResponse;
 import com.jlopez.clienteinfo.service.ClienteService;
 
 @RestController
-@RequestMapping("/api/cliente/")
+@RequestMapping("/")
 public class ClienteController {
 
 	@Autowired
